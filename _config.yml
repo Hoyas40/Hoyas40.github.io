@@ -2,32 +2,33 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:               Aiden
+title:               Devan
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
-url:                 https://isme2n.github.io
+url:                 https://Hoyas40.github.io
 
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
 baseurl:             ""
 
 # A very short description of your page
-tagline:             가장 게으르기위해 가장 부지런한 개발자
+tagline:             Research 와 Development 사이 그 어딘가
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
-  게으르기 때문에 게발자.
-  글쓰는 걸 좋아하고, 디자인과 개발을 좋아한다.
+  내 비밀은 이런거야.. 매우 간단한 거지..
+  오로지 마음으로 보아야만 정확하게 볼 수 있다는 거야..
+  가장 중요한 것은 눈에는 보이지 않은 법이야
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:
-  name:              aiden min
-  email:             zoqozqz@gmail.com
+  name:              devan lee
+  email:             hosmail@gmail.com
 
 # Fallback image and color
-image:               /assets/img/nap.jpg
+image:               /assets/img/PetitPrince.jpg
 color:               '#4f86aa'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
