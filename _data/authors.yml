@@ -8,8 +8,10 @@ isme2n:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    세상에서 가장 게으르기 위해 가장 부지런한 타입.
-    글쓰는 것과 디자인, 개발을 좋아한다. 좋은게 좋은거고, 예쁜게 좋은거고, 노는게 좋은거라고 생각한다. 좋아하는게 많은 편.
+    적지 않은 나이지만, 새로운 마음으로 항상 새로운 걸 배우기 위해 노력한다.
+    환경을 탓하지 말자. 
+    현재는 초음파 장비를 만드는 회사에서 C++을 메인으로 사용중이다.
+    현재 관심 분야는 파이썬, 알고리즘, 머신 러닝, 딥러닝
 
   # This photo will be used in the about section
   picture:
