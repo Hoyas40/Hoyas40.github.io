@@ -28,7 +28,7 @@ author:
   email:             hosmail@gmail.com
 
 # Fallback image and color
-image:               /assets/img/PetitPrince.jpg
+image:               /assets/img/place_bellecour.jpg
 color:               '#4f86aa'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
