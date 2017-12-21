@@ -2,7 +2,7 @@
 layout: tag-blog
 title: C++
 slug: c++
-category: dev
+category: development
 menu: false
 order: 1
 ---
