@@ -1,24 +1,94 @@
 ---
 layout: post
-title:  "EC++ 01장 - C++에 왔으면 C++의 법을 따릅시다."
-subtitle:   "Effective cpp chap01"
+title:  "EC++ 항목 02 - #define을 쓰려거든 const, enum, inline을 떠올리자."
+subtitle:   "Effective cpp item 01"
 categories: development
 tags: c++ development
 comments: true
 ---
 
-Effective C++ chap 01 요약
+"#define을 쓰려거든 const, enum, inline을 떠올리자."
 
-항목 02 : #define을 쓰려거든 const, enum, inline을 떠올리자.
+## 1 단순한 상수를 쓸 때는, `#define` 보다 `const 객체` 혹은 `enum`을 우선 생각합시다.  
 
-항목 03 : 낌새만 보이면 const를 들이대 보자!
+### 1.1 const 객체를 사용하자
 
-항목 04 : 객체를 사용하기 전에 반드시 그 객체를 초기화하자.
+```C++
+#define ASPECT_RATIO 1.653
+```
+
+ASPECT_RATIO는 `symbolic name`이 아니며, 따라서 기호 테이블에 삽입되지 않는다.  
+컴파일 과정에서 선행처리자가 1.653 라는 숫자 상수로 교체를 하기 때문에 디버깅이 어려워 진다.  
+에러 메시지가 ASPECT_RATIO 라는 정보를 주는 대신 1.653 으로 표시될 수 있으며, macro가 직접 작성한 파일에 위치한 게 아니라면 분석이 아주 어려울 수 있다.
+
+해결 방법은 아주 간단하다. `const 객체`를 사용하면 된다.
+```C++
+const double ASPECT_RATIO = 1.653;
+```
+
+이에 따른 `이득`은 파일 크기가 작아 질 수 있다는 점이다.
+
+  
+  
+### 1.2 enum - 나열자 둔갑술
+
+클래스 상수를 사용하기 위해서는 일반적으로 class 선언부에 `static const` 객체를 추가하게 된다.
+
+```C++
+class CostEstimate
+{
+private:
+    static const int NumTurns = 5;
+    int scores[NumTurns];
+    ...
+}
+```
+NumTurns의 정의는 cpp 파일에 둬야 한다.
+
+오래된 컴파일러의 경우 위 코드가 에러 날 수 있다. (요즘 컴파일러는 안 난다!)  
+이유는 변수 선언 시점에 초기화를 허용하는 게 이상하다고 여기기 때문이다.
+
+이 문제를 해결하기 위해서는 `나열자 둔갑술` 기법을 주로 사용한다.
+```C++
+class CostEstimate
+{
+private:
+    enum{ NumTurns = 5}; // 나열자 둔갑술
+    int scores[NumTurns];
+    ...
+}
+```
+
+enum은
+1. 주소를 취할 수 없다.
+1. 쓸데 없는 메모리 할당이 없다.
+
+
+나열자 둔갑술은 `템플릿 메타프로그래밍`의 핵심이기도 하다.
 
 
 ---
-## 항목 02 : #define을 쓰려거든 const, enum, inline을 떠올리자.
+## 2 함수처럼 쓰이는 매크로를 만들려면, `#define` 매크로보다 `인라인 함수`를 우선 생각합시다.
+
+```C++
+#define CALL_WITH_MAX(a,b) f((a) > (b) ? (a) : (b))
+
+int a = 5, b = 0;
+CALL_WITH_MAX(++a, b);       // a 가 두 번 증가한다
+CALL_WITH_MAX(++a, b + 10);  // a 가 한 번 증가한다.
+```
+주석에 쓰인 것처럼, 사용 방법에 따라 a 가 1 번 또는 2번 증가 할 수 있다.
 
 
-### 살펴보자
+매크로 함수보다 훨씬 나은 방법이 있다.
+효율 뿐만 아니라 매크로 함수의 동작 방식 및 타입 안전성까지 그대로 유지 하는 방법은 바로..
+
+```C++
+template<typename T>
+inline void CallWithMax( const T& a, const T& b)
+{
+    f( a > b ? a : b);
+}
+```
+또한 위 함수는 `진짜` 함수이기에 `유효 범위 및 접근 규칙`을 알 수 있다.
 
