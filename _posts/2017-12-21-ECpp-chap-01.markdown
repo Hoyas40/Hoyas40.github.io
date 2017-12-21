@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "C++에 왔으면 C++의 법을 따릅시다."
+title:  "EC++ 01장 - C++에 왔으면 C++의 법을 따릅시다."
 subtitle:   "Effective cpp chap01"
-categories: essay
-tags: essay
+categories: development
+tags: c++
 comments: true
 ---
 
