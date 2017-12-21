@@ -3,7 +3,7 @@ layout: post
 title:  "EC++ 01장 - C++에 왔으면 C++의 법을 따릅시다."
 subtitle:   "Effective cpp chap01"
 categories: development
-tags: c++
+tags: c++ development
 comments: true
 ---
 
