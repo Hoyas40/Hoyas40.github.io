@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Essay
-slug: essay
-category: essay
+title: C++
+slug: c++
+category: dev
 menu: false
 order: 1
 ---
