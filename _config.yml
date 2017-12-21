@@ -13,13 +13,14 @@ url:                 https://Hoyas40.github.io
 baseurl:             ""
 
 # A very short description of your page
-tagline:             Research 와 Development 사이 그 어딘가
+tagline:             Research 와 Development 사이  
+                     그 어딘가
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
-  내 비밀은 이런거야.. 매우 간단한 거지..
-  오로지 마음으로 보아야만 정확하게 볼 수 있다는 거야..
+  내 비밀은 이런거야.. 매우 간단한 거지..  
+  오로지 마음으로 보아야만 정확하게 볼 수 있다는 거야..  
   가장 중요한 것은 눈에는 보이지 않은 법이야
 
 # This should be the same author as first entry in `_data/authors.yml`

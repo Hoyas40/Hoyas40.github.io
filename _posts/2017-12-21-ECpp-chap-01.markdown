@@ -7,7 +7,7 @@ tags: c++ development
 comments: true
 ---
 
-"#define을 쓰려거든 const, enum, inline을 떠올리자."
+#define을 쓰려거든 const, enum, inline을 떠올리자.
 
 ## 1 단순한 상수를 쓸 때는, `#define` 보다 `const 객체` 혹은 `enum`을 우선 생각합시다.  
 
