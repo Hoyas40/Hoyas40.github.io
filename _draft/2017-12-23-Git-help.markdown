@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Git 도움말"
+subtitle:   "Git help"
+categories: development
+tags: git
+comments: true
+---
+
+Git 명령어의 help 보는 법을 알아보자.
+
+## Git help 명령어
+
+Git `help 명령어`의 기본 포맷은 다음과 같다 :
+```
+$ git help <verb>
+```
+예를 들어 config 명령어의 도움말을 보기 위해서는 다음의 명령어를 입력하면 된다.  
+아래 명령어는 config에 해당하는 `도움말 문서 전체`를 보여준다.
+```
+$ git help config
+```
+
+### 간단하게 option 만 보는 법
+
+문서가 아니라 `간략한 option`만 보려면 아래 명령어를 입력 하면 된다.
+```
+$ git config -h
+$ git config --help
+```
