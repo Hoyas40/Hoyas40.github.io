@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "EC++ 항목 02 - #define을 쓰려거든 const, enum, inline을 떠올리자."
-subtitle:   "Effective cpp item 01"
+subtitle:   "Effective cpp item 02"
 categories: development
-tags: c++ development
+tags: c++
 comments: true
 ---
 
