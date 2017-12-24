@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git 도움말"
+title:  "Git - 도움말"
 subtitle:   "Git help"
 categories: development
 tags: git
