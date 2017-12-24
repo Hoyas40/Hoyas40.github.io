@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Git 최초 Setup 방법 및 도움말"
-subtitle:   "Git Setup and help"
+title:  "Git 최초 Setup 방법"
+subtitle:   "Git initial Setup"
 categories: development
 tags: git
 comments: true
