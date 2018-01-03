@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git 파일 무시하기 - .gitignore"
+title:  "Git - 파일 무시하기 - .gitignore"
 subtitle:   "Git ignore files"
 categories: development
 tags: git
